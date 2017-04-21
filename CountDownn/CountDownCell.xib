@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="CountDownCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="99"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cr9-kc-NMx" userLabel="Time Label">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="该商品已过期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGc-fE-ehg" userLabel="Count Down Label">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shop.png" translatesAutoresizingMaskIntoConstraints="NO" id="irF-nW-hos" userLabel="TitleIV">
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="irF-nW-hos" secondAttribute="height" multiplier="1:1" id="M5i-6g-da5"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="nGc-fE-ehg" secondAttribute="bottom" constant="16" id="3bS-37-lMn"/>
+                    <constraint firstItem="irF-nW-hos" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="AnV-7f-RMb"/>
+                    <constraint firstItem="Cr9-kc-NMx" firstAttribute="leading" secondItem="irF-nW-hos" secondAttribute="trailing" constant="8" id="BCF-pI-hGs"/>
+                    <constraint firstItem="nGc-fE-ehg" firstAttribute="leading" secondItem="irF-nW-hos" secondAttribute="trailing" constant="13" id="Bcv-hD-4pv"/>
+                    <constraint firstItem="nGc-fE-ehg" firstAttribute="leading" secondItem="irF-nW-hos" secondAttribute="trailing" constant="13" id="DVw-ez-Cqt"/>
+                    <constraint firstItem="nGc-fE-ehg" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="8" id="Dfu-Xi-Pbh"/>
+                    <constraint firstItem="Cr9-kc-NMx" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="G36-Sn-gjj"/>
+                    <constraint firstItem="Cr9-kc-NMx" firstAttribute="leading" secondItem="irF-nW-hos" secondAttribute="trailing" constant="8" id="TKX-7h-7dN"/>
+                    <constraint firstAttribute="bottom" secondItem="irF-nW-hos" secondAttribute="bottom" constant="5" id="TyJ-6B-tZ2"/>
+                    <constraint firstItem="irF-nW-hos" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="dph-hH-BmV"/>
+                    <constraint firstItem="Cr9-kc-NMx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="kkP-Rk-6ip"/>
+                    <constraint firstItem="nGc-fE-ehg" firstAttribute="top" secondItem="Cr9-kc-NMx" secondAttribute="bottom" constant="23" id="myH-mr-rPq"/>
+                    <constraint firstItem="nGc-fE-ehg" firstAttribute="top" secondItem="Cr9-kc-NMx" secondAttribute="bottom" constant="23" id="vKl-0O-L2B"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="countDownLabel" destination="nGc-fE-ehg" id="DU7-j4-Duu"/>
+                <outlet property="timeLabel" destination="Cr9-kc-NMx" id="7jA-aL-C9n"/>
+                <outlet property="titleIV" destination="irF-nW-hos" id="BZS-z5-TDm"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="shop.png" width="34" height="34"/>
+    </resources>
+</document>
